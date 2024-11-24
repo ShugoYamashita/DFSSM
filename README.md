@@ -11,7 +11,7 @@ Removing rain degradations in images is recognized as a significant issue. In th
 | Synthetic | Rain200H | 32.99 | 0.9403 | [Download](https://drive.google.com/drive/folders/1LsdsVkCgNhPpN5-8njaC39eA6sKPxDVC?usp=sharing) |
 | Synthetic | Rain200L | 41.81 | 0.9905 | [Download](https://drive.google.com/drive/folders/1LsdsVkCgNhPpN5-8njaC39eA6sKPxDVC?usp=sharing) |
 | Synthetic | DID-Data | 35.66 | 0.9671 | [Download](https://drive.google.com/drive/folders/1LsdsVkCgNhPpN5-8njaC39eA6sKPxDVC?usp=sharing) |
-| Synthetic | DDN-Data | 34.53 | 0.9607 | [Download](https://drive.google.com/drive/folders/1LsdsVkCgNhPpN5-8njaC39eA6sKPxDVC?usp=sharing) |
+| Synthetic | DDN-Data | 34.53 | 0.9608 | [Download](https://drive.google.com/drive/folders/1LsdsVkCgNhPpN5-8njaC39eA6sKPxDVC?usp=sharing) |
 | Real | SPA-Data | 49.55 | 0.9939 | [Download](https://drive.google.com/drive/folders/1LsdsVkCgNhPpN5-8njaC39eA6sKPxDVC?usp=sharing) |
 | Real | LHP-Rain | 33.99 | 0.9322 | [Download](https://drive.google.com/drive/folders/1LsdsVkCgNhPpN5-8njaC39eA6sKPxDVC?usp=sharing) |
 
