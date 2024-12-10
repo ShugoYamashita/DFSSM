@@ -24,10 +24,12 @@ PSNR and SSIM results are computed by using this [Matlab Code](https://github.co
 If you use this code or models in your research and find it helpful, please cite the following paper:
 
 ```
-@inproceedings{yamashita2024image,
-    title={Image Deraining with Frequency-Enhanced State Space Model},
-    author={Yamashita, Shugo and Ikehara, Masaaki},
-    booktitle={ACCV},
-    year={2024}
+@InProceedings{Yamashita_2024_ACCV,
+    author    = {Yamashita, Shugo and Ikehara, Masaaki},
+    title     = {Image Deraining with Frequency-Enhanced State Space Model},
+    booktitle = {Proceedings of the Asian Conference on Computer Vision (ACCV)},
+    month     = {December},
+    year      = {2024},
+    pages     = {3655-3671}
 }
 ```
