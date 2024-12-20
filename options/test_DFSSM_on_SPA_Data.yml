@@ -1,0 +1,60 @@
+name: test_DFSSM_on_Rain200H
+model_type: ImageCleanModel
+scale: 1
+num_gpu: 1
+manual_seed: 100
+
+datasets:
+  test_1:
+    name: ValSet
+    type: Dataset_PairedImage
+    dataroot_gt:  /home/yamashita/dataset/Rain200H/test/gt
+    dataroot_lq:  /home/yamashita/dataset/Rain200H/test/input
+    io_backend:
+      type: disk
+    meta_info_file: basicsr/data/meta_info/meta_info_SPA_Data_test.txt
+    filename_tmpl: '{}'
+
+# network structures
+network_g:
+  type: DFSSM
+  inp_channels: 3
+  out_channels: 3
+  dim: 48
+  num_blocks: [4, 4, 4, 4, 4, 4, 4]
+  num_refinement_blocks: 4
+  mlp_ratio: 1.5
+  num_fssb_blocks: [3, 3, 3, 3, 3, 3, 3, 3]
+  fftm_squeeze_factor: 2
+  bias: False
+  dual_pixel_task: False
+
+# path
+path:
+  pretrain_network_g: <trained_weight_path>
+  strict_load_g: true
+
+# validation settings
+val:
+  window_size: 8
+  save_img: true
+  rgb2bgr: true
+  use_image: true
+  max_minibatch: 1
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: true
+
+# training settings
+train:
+  mixing_augs:
+    mixup: true
+    mixup_beta: 1.2
+    use_identity: true

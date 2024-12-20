@@ -1,0 +1,15 @@
+# cache
+__pycache__
+
+# vscode setting
+.vscode
+
+# .DS_Store
+.DS_Store
+
+# basicsr
+.eggs/
+basicsr.egg-info/
+datasets/
+version.py
+VERSION

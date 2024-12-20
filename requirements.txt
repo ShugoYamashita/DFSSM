@@ -1,0 +1,9 @@
+packaging
+causal_conv1d==1.0.0
+mamba_ssm==1.0.1
+opencv-python
+lmdb
+timm==0.9.12
+scipy
+scikit-image
+tensorboard
