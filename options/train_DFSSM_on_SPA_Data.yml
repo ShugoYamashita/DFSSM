@@ -87,7 +87,7 @@ train:
 
   # losses
   pixel_opt:
-    type: FreqLoss
+    type: L1FreqLoss
     loss_weight: 0.01
     reduction: mean
 
