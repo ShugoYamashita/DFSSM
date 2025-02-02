@@ -31,8 +31,8 @@ datasets:
   val:
     name: ValSet
     type: Dataset_PairedImage
-    dataroot_gt:  /home/yamashita/dataset/SPA_Data/test/gt
-    dataroot_lq:  /home/yamashita/dataset/SPA_Data/test/input
+    dataroot_gt:  ~/dataset/SPA_Data/test/gt
+    dataroot_lq:  ~/dataset/SPA_Data/test/input
     io_backend:
       type: disk
     meta_info_file: basicsr/data/meta_info/meta_info_SPA_Data_test.txt

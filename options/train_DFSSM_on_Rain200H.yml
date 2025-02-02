@@ -30,8 +30,8 @@ datasets:
   val:
     name: ValSet
     type: Dataset_PairedImage
-    dataroot_gt:  /home/yamashita/dataset/Rain200H/test/gt
-    dataroot_lq:  /home/yamashita/dataset/Rain200H/test/input
+    dataroot_gt:  ~/dataset/Rain200H/test/gt
+    dataroot_lq:  ~/dataset/Rain200H/test/input
     io_backend:
       type: disk
 
