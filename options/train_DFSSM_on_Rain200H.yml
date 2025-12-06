@@ -85,7 +85,7 @@ train:
   # losses
   pixel_opt:
     type: L1FreqLoss
-    loss_weight: 0.01
+    loss_weight: 1.0
     reduction: mean
 
 # validation settings

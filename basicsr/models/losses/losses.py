@@ -37,8 +37,7 @@ class L1Loss(nn.Module):
             weight (Tensor, optional): of shape (N, C, H, W). Element-wise
                 weights. Default: None.
         """
-        return self.loss_weight * l1_loss(
-            pred, target, weight, reduction=self.reduction)
+        return self.loss_weight * l1_loss(pred, target, weight, reduction=self.reduction)
 
 class L1FreqLoss(nn.Module):
     """
@@ -49,7 +48,7 @@ class L1FreqLoss(nn.Module):
         reduction (str): Specifies the reduction to apply to the output.
             Supported choices are 'none' | 'mean' | 'sum'. Default: 'mean'.
     """
-    def __init__(self, loss_weight=0.01, reduction='mean', **kwargs):
+    def __init__(self, loss_weight=1.0, reduction='mean', **kwargs):
         super().__init__()
         if reduction not in ['none', 'mean', 'sum']:
             raise ValueError(f"Unsupported reduction mode: {reduction}. "
@@ -57,7 +56,7 @@ class L1FreqLoss(nn.Module):
 
         self.loss_weight = loss_weight
         self.reduction = reduction
-        self.l1_loss = L1Loss(loss_weight, reduction)
+        self.l1_loss = L1Loss(reduction=reduction)
 
     def forward(self, pred, target):
         # Compute the L1 loss in the frequency domain using the FFT difference
@@ -65,4 +64,4 @@ class L1FreqLoss(nn.Module):
         freq_loss = torch.mean(torch.abs(diff))
 
         # Combine frequency and spatial L1 losses
-        return self.loss_weight * freq_loss + self.l1_loss(pred, target)
+        return self.loss_weight * (self.l1_loss(pred, target) + 0.01 * freq_loss)
